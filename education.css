@@ -1,0 +1,222 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Vividly, sans-serif;
+            background-color: #e8cbbd;
+            color: #333;
+        }
+
+        .nav-bar {
+            text-align: right;
+            margin: 30px 0;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: brown;
+            font-size: 20px;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+	/* Dropdown Menu Styling */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #c7a286;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 10px 15px;
+            display: block;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f9f9f9;
+            color: brown;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        /* Header */
+        .header {
+            background-color: #f3e6ff;
+            color: #c7a286;
+            text-align: center;
+            padding: 8px 10px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Explore Us Section */
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #34495e;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+	/* Container for side-by-side images */
+        .image-container {
+            display: flex; /* Flexbox layout */
+            justify-content: center; /* Center-align images */
+            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+            gap: 20px; /* Spacing between images */
+            padding: 10px;
+        }
+
+        /* Individual image boxes with captions */
+        .image-box {
+            text-align: center; /* Center captions */
+            border: 3px solid #edbb99; /* Add border to images */
+            border-radius: 10px; /* Rounded corners */
+            padding: 5px; /* Space inside the box */
+            background-color: #fff;
+        }
+
+        .image-box img {
+            width: 250px; /* Set image width */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove inline spacing */
+            margin-bottom: 10px;
+        }
+
+        .image-box p {
+            font-size: 14px;
+            color: #333;
+            margin: 0;
+        }
+
+/* Videos Section */
+.video-container {
+    display: flex;
+    justify-content: center; /* Center-align the videos */
+    gap: 20px; /* Add spacing between videos */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 20px 0;
+}
+
+.video-box {
+    text-align: center; /* Center the video and caption */
+    border: 3px solid #edbb99; /* Add a border around the video */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.video-box p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+        .sub-heading {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 500px;
+            margin: 1rem;
+            text-align: left;
+            cursor: pointer; /* Makes the card clickable */
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+      
+	     
+	/* Styling for General Section Content */
+.hidden-section {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: maroon; 
+    line-height: 1.6; /* Better text readability */
+    text-align: justify; /* Align the text evenly */
+    padding: 15px 20px; /* Padding inside the section */
+    margin-top: 10px;
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
+
+	}
+
+	 footer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ffecec;
+    height: 60px; /* Adjust the height if needed */
+    box-sizing: border-box;
+	}
+

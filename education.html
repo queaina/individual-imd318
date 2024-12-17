@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Vividly, sans-serif;
+            background-color: #e8cbbd;
+            color: #333;
+        }
+
+        .nav-bar {
+            text-align: right;
+            margin: 30px 0;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: brown;
+            font-size: 20px;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+	/* Dropdown Menu Styling */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #c7a286;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            min-width: 200px;
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 10px 15px;
+            display: block;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f9f9f9;
+            color: brown;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        /* Header */
+        .header {
+            background-color: #f3e6ff;
+            color: #c7a286;
+            text-align: center;
+            padding: 8px 10px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Explore Us Section */
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #34495e;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+	/* Container for side-by-side images */
+        .image-container {
+            display: flex; /* Flexbox layout */
+            justify-content: center; /* Center-align images */
+            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+            gap: 20px; /* Spacing between images */
+            padding: 10px;
+        }
+
+        /* Individual image boxes with captions */
+        .image-box {
+            text-align: center; /* Center captions */
+            border: 3px solid #edbb99; /* Add border to images */
+            border-radius: 10px; /* Rounded corners */
+            padding: 5px; /* Space inside the box */
+            background-color: #fff;
+        }
+
+        .image-box img {
+            width: 250px; /* Set image width */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove inline spacing */
+            margin-bottom: 10px;
+        }
+
+        .image-box p {
+            font-size: 14px;
+            color: #333;
+            margin: 0;
+        }
+
+/* Videos Section */
+.video-container {
+    display: flex;
+    justify-content: center; /* Center-align the videos */
+    gap: 20px; /* Add spacing between videos */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 20px 0;
+}
+
+.video-box {
+    text-align: center; /* Center the video and caption */
+    border: 3px solid #edbb99; /* Add a border around the video */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.video-box p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+        .sub-heading {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 500px;
+            margin: 1rem;
+            text-align: left;
+            cursor: pointer; /* Makes the card clickable */
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+      
+	     
+	/* Styling for General Section Content */
+.hidden-section {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: maroon; 
+    line-height: 1.6; /* Better text readability */
+    text-align: justify; /* Align the text evenly */
+    padding: 15px 20px; /* Padding inside the section */
+    margin-top: 10px;
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
+
+	}
+
+	 footer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ffecec;
+    height: 60px; /* Adjust the height if needed */
+    box-sizing: border-box;
+	}
+
+    </style>
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="audio/lovergirl.M4A" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+    <a href="home.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+    <a href="family.html">Family</a>
+    <a href="friendship.html">Friendship</a>        
+	<!-- Dropdown Menu for Education -->
+        <div class="dropdown">
+            <a href="education.html">Education</a> 
+            <div class="dropdown-content">
+                <a href="javascript:void(0)" onclick="showContent('smkKhirJohari')">SMK Khir Johari</a>
+                <a href="javascript:void(0)" onclick="showContent('uitmMerbok')">UiTM Merbok</a>
+            </div>
+        </div>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <p>Education is the foundation of growth and success. I value every opportunity to learn and grow.</p>
+    </div>
+
+    <!-- Explore Us Section -->
+    <div class="container">
+        <h1>My Academic Journey</h1>
+        <p class="sub-heading">"The journey of a thousand miles begins with a single step".</p>
+        <div class="card-container">
+            <!-- Card 1: SMK Khir Johari -->
+            <div class="card" onclick="scrollToContent('smkKhirJohari')">
+                <img src="imgedu/kjhs.jpg" alt="SMK Khir Johari">
+                <div class="card-content">
+                    <h2 class="card-title">SMK Khir Johari, Sungai Petani, Kedah</h2>
+                    <p class="card-text">2017 - 2022</p>
+                </div>
+            </div>
+
+            <!-- Card 2: UiTM Merbok -->
+            <div class="card" onclick="scrollToContent('uitmMerbok')">
+                <img src="imgedu/uitm.jpg" alt="UiTM Kedah">
+                <div class="card-content">
+                    <h2 class="card-title">UiTM Merbok, Kedah</h2>
+                    <p class="card-text">Diploma in Information Management
+<br>
+<br>
+Oct 2022 - Feb 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Content Sections -->
+    <div id="smkKhirJohari" style="height: 800px; background-color: #fdf2e9; padding: 20px; margin-top: 20px; display: none;">
+        <h2>SMK Khir Johari, Sungai Petani, Kedah</h2>
+        <p>I studied at SMK Khir Johari for five years since Form 1 until Form 5. I gained a lot of experience while studying at this school. I would like to share some activities/memories while study at SMK Khir Johari <3.</p>
+<p>After completing my PT3 in 2019, I continued Form 4 by taking Business and Economics as elective subjects.
+<br>
+<br>
+<h3 align="center">My Journey at SMKKJ ♥︎</h3>
+<br>
+ 
+<!-- Container for Images -->
+    <div class="image-container">
+<!-- Image 1 -->
+        <div class="image-box">
+            <img src="imgedu/aspuri1.jpg" alt="Aspuri">
+            <p>Hostel Prefect SMKKJ 2021</p>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="image-box">
+            <img src="imgedu/aspuri2.jpg" alt="Aspuri2">
+            <p>Aspuri Batch 04 2020</p>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="image-box">
+            <img src="imgedu/result.jpg" alt="SPM">
+            <p>Result SPM !</p>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="image-box">
+            <img src="imgedu/cgumun.jpg" alt="Cikgu">
+            <p>Our Beloved Science Teacher, Cikgu Mun ♥︎</p>
+        </div>
+
+	<!-- Videos Section Below Image 4 -->
+	<div class="video-container">
+    <!-- Video 1 -->
+    <div class="video-box">
+        <iframe width="400" height="200" src="videdu/orientasi1.mp4" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+        <p>Asrama Orientation 2020</p>
+    </div>
+    </div>
+</div>
+
+
+    </div>
+<br>
+<br>
+<br>
+
+    <div id="uitmMerbok" style="height: 900px; background-color: #f9ebea; padding: 25px; margin-top: 20px; display: none;">
+        <h2>UiTM Merbok, Kedah</h2>
+        <p>After finishing my SPM, I got an offer to continue my studies at UiTM Merbok, Kedah in Diploma Information Management for 2 and half years, for 5 semesters.</p>
+
+<h3 align="center">My Diploma Journey ♥︎</h3>
+<br>
+	<!-- Container for Images -->
+    <div class="image-container">
+<!-- Image 1 -->
+        <div class="image-box">
+            <img src="imgedu/cm.jpg" alt="Classmates">
+            <p>Classmates for 5 Semester ♥︎</p>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="image-box">
+            <img src="imgedu/rumet.jpg" alt="Roomates">
+            <p>Roomates for 3semester
+<br>
+- Shad, Saza, Que & Ummu -</p>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="image-box">
+            <img src="imgedu/intern.jpg" alt="Intern">
+            <p>End of Intership •ᴗ•</p>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="image-box">
+            <img src="imgedu/saf2.jpg" alt="Netball">
+            <p>Playing netball for SAF 2024</p>
+        </div>
+
+	
+
+    <!-- Video 2 -->
+    <div class="video-box">
+        <iframe width="400" height="200" src="videdu/coloring.mp4" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+        <p>Joining activity at UiTM- Coloring Sekar Batik</p>
+    </div>
+</div>
+
+
+    </div>
+
+	<footer>
+        <p>&copy; Que's Website 2024. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        // Function to smoothly scroll to the content
+        function scrollToContent(contentId) {
+            // Scroll to the element with the given ID
+            var element = document.getElementById(contentId);
+            element.style.display = 'block'; // Show the content when clicked
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Smooth scrolling
+       
+ }
+
+</script>
+
+	<audio id="background-audio" autoplay loop muted>
+    <source src="audio/lovergirl.m4a" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+<script>
+    // Unmute audio after user interaction (click)
+    document.body.addEventListener('click', function() {
+        const audio = document.getElementById('background-audio');
+        audio.muted = false;
+        audio.play();
+    });
+</script>
+
+</body>
+</html>

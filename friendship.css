@@ -1,0 +1,157 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Vividly, sans-serif;
+            background-color: #e8cbbd;
+            color: #333;
+        }
+
+        .nav-bar {
+            text-align: right;
+            margin: 30px 0;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: brown;
+            font-size: 20px;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        .header {
+            background-color: #f0d6d6;
+            color: maroon;
+            text-align: center;
+            padding: 5px 5px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            width: 100%;
+            box-sizing: border-box;
+	    margin-top: 15;
+        }
+
+        .header .section {
+            margin: 10px 0;
+            padding: 15px;
+        }
+
+        .header .section h2 {
+            font-size: 22px;
+            color: #8c5b43;
+            background-color: #e6b0aa;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .header .section .friend-images {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .header .section .friend-images .frame {
+            text-align: center;
+            width: 200px;
+	    height: 200px;
+	    
+        }
+
+        .header .section .friend-images img, 
+        .header .section .friend-images video {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #8c5b43;
+        }
+
+        .header .section .friend-images .caption {
+            margin-top: 5px;
+            font-size: 18px;
+            color: #5d4037;
+        }
+
+	/* Guestbook Styling */
+.guestbook {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fdf3f0; /* Light pinkish background */
+    border: 2px solid #e6b0aa; /* Soft border */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Vividly, sans-serif;
+    color: #5d4037; /* Brownish text */
+}
+
+.guestbook h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #8c5b43; /* Dark brown */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.guestbook label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5d4037;
+}
+
+.guestbook input[type="text"],
+.guestbook textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d7a9a2; /* Light pink border */
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #fff; /* White input background */
+    color: #333; /* Text color */
+}
+
+.guestbook input[type="text"]:focus,
+.guestbook textarea:focus {
+    outline: none;
+    border-color: #8c5b43; /* Focus color - brownish */
+    box-shadow: 0 0 5px #e6b0aa;
+}
+
+.guestbook button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #8c5b43; /* Dark brown button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.guestbook button:hover {
+    background-color: #5d4037; /* Darker brown on hover */
+}
+
+        footer {
+            text-align: center;
+            padding: 6px;
+            background-color: #fff;
+            border-top: 1px solid #ffecec;
+        }

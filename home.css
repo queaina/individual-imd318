@@ -1,0 +1,63 @@
+body {
+            font-family: Winkle, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f5ee;
+            color: #752f2f;
+        }
+
+        /* Navigation Bar Styling */
+        .nav-bar {
+            display: flex; /* Flexbox for centering */
+            justify-content: center; /* Center align items horizontally */
+            align-items: center; /* Center align items vertically */
+            margin: 10px 0;
+            gap: 30px; /* Adds spacing between links */
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: brown;
+            font-size: 20px;
+            font-weight: normal;
+            transition: color 0.3s;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+            color: #632424; /* Darker brown when hovered */
+        }
+
+        header {
+            background-color: #f6e8e8;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 30px 20px;
+            background: #fafafa;
+        }
+
+        .banner h1 {
+            font-family: Winkle, serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .banner img {
+            width: 500px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #e5e5e5;
+        }
+    </style>
+</head>
+<body>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Vividly, sans-serif;
+            background-color: #fae5d3;
+            color: #333;
+        }
+
+        .nav-bar {
+            text-align: right;
+            margin: 30px 0;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: brown;
+            font-size: 20px;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        .header {
+            background-color: #f5cba7;
+            color: #cd6155;
+            text-align: center;
+            padding: 8px 10px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Button Section */
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button-container button {
+	   font-family: Vividly, sans-serif;
+            background-color: #edbb99;
+            border: none;
+            color: #641e16 ;
+            padding: 10px 20px;
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: brown;
+            color: white;
+        }
+
+	/* Gallery Styling */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            padding: 20px;
+        }
+
+        .gallery img, .gallery video {
+            width: 200%;
+            max-width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover, .gallery video:hover {
+            transform: scale(1.05);
+        }
+
+        /* Gallery Section */
+        .gallery-container {
+            display: none; /* Hide initially */
+            padding: 20px;
+            text-align: center;
+	    font-size: 16px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .gallery img, .gallery video {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 5px solid #d98880;
+        }
+
+	 footer {
+            text-align: center;
+            padding: 6px;
+            background-color: #fff;
+            border-top: 1px solid #ffecec;
+	}
+
+    </style>
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="audio/lovergirl.M4A" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="home.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="family.html">Family</a>
+        <a href="friendship.html">Friendship</a>
+        <a href="education.html">Education</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+	<p>Welcome to My Gallery.</p>
+	<p>Here are some moments captured from my life.</p>
+
+    </div>
+
+    <!-- Buttons for Categories -->
+    <div class="button-container">
+        <button onclick="showGallery('travel')">Travel</button>
+        <button onclick="showGallery('nature')">Nature</button>
+        <button onclick="showGallery('celebration')">Celebration</button>
+    </div>
+
+ <!-- Default Gallery Grid -->
+    <div class="gallery">
+        <img src="imggallery/ch3.jpg" alt="Image 1">
+        <img src="imggallery/wed7.jpg" alt="Image 2">
+        <img src="imggallery/iph5.jpg" alt="Image 3">
+        <img src="imggallery/bmc1.jpg" alt="Image 4">
+        <img src="imggallery/ch5.jpg" alt="Image 5">
+           
+       
+    </div>
+
+
+    <!-- Gallery Containers -->
+    <div id="travel" class="gallery-container">
+        <h2>Cameron Highlands 🍓</h2>
+        <div class="gallery">
+            <img src="imggallery/ch10.jpg" alt="Travel 1">
+            <img src="imggallery/ch2.jpg" alt="Travel 2">
+            <img src="imggallery/ch1.jpg" alt="Travel 3">
+	    <img src="imggallery/ch4.jpg" alt="Travel 3">
+	    <img src="imggallery/ch5.jpg" alt="Travel 3">
+      
+	    <img src="imggallery/ch8.jpg" alt="Travel 1">
+            <img src="imggallery/ch6.jpg" alt="Travel 2">
+            <img src="imggallery/ch9.jpg" alt="Travel 3">
+	    <img src="imggallery/ch11.jpg" alt="Travel 3">
+	    <img src="imggallery/ch7.jpg" alt="Travel 3">
+
+
+	</div>
+ 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	<h2>Ipoh</h2>
+        <div class="gallery">
+            <img src="imggallery/iph1.jpg" alt="Travel 1">
+            <img src="imggallery/iph2.jpg" alt="Travel 2">
+            <img src="imggallery/iph3.jpg" alt="Travel 3">
+	    <img src="imggallery/iph7.jpg" alt="Travel 3">
+	    <img src="imggallery/iph4.jpg" alt="Travel 3">
+	    <img src="imggallery/iph5.jpg" alt="Travel 3">
+            
+	<video controls>
+                <source src="vidgallery/iph8.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+
+	<img src="imggallery/iph6.jpg" alt="Travel 3">
+
+
+        </div>
+    </div>
+
+    <div id="nature" class="gallery-container">
+        <h2>Hiking Bukit Telipong</h2>
+        <div class="gallery">
+            <img src="imggallery/hk1.jpg" alt="Nature 1">
+	    <video controls>
+                <source src="vidgallery/hk3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <img src="imggallery/hk2.jpg" alt="Nature 2">
+          
+
+        </div>
+    
+<br>
+<br>
+<br>
+<br>
+
+	<h2>Hiking Bukit Mokcun</h2>
+        <div class="gallery">
+    
+
+	 <img src="imggallery/bmc2.jpg" alt="Travel 3">
+	 <img src="imggallery/bmc1.jpg" alt="Travel 3">
+	 <img src="imggallery/bmc3.jpg" alt="Travel 3">
+	
+
+	</div>
+
+<br>
+<br>
+<br>
+<br>
+
+	<h2>Mengkuang Nature Run</h2>
+        <div class="gallery">
+            
+	 <img src="imggallery/run1.jpg" alt="Travel 3">
+	 <img src="imggallery/run2.jpg" alt="Travel 3">
+	 <img src="imggallery/run3.jpg" alt="Travel 3">
+	 
+	</div>
+
+</div>
+
+    <div id="celebration" class="gallery-container">
+        <h2>Raya 2024 ⋅˚₊ 𐙚 ‧₊˚ ⋅</h2>
+        <div class="gallery">
+            <img src="imggallery/raya1.jpg" alt="Celebration 1">
+            <img src="imggallery/raya3.jpg" alt="Celebration 2">
+            <img src="imggallery/raya2.jpg" alt="Celebration 3">
+	    <img src="imggallery/raya4.jpg" alt="Celebration 3">
+	    <img src="imggallery/raya5.jpg" alt="Celebration 3">
+
+	    <img src="imggallery/raya8.jpg" alt="Celebration 3">
+          
+	 <img src="imggallery/raya6.jpg" alt="Celebration 3">
+
+	 <img src="imggallery/raya15.jpg" alt="Celebration 3">
+	 <img src="imggallery/raya10.jpg" alt="Celebration 3">
+	 
+	 <img src="imggallery/raya12.jpg" alt="Celebration 3">
+	 
+        
+</div>
+   
+
+<br>
+<br>
+<br>
+<br>
+
+	<h2>Syirah's Wedding 🕊♡</h2>
+        <div class="gallery">
+            
+	 <img src="imggallery/wed1.jpg" alt="Travel 3">
+	 <img src="imggallery/wedd2.jpg" alt="Travel 3">
+
+	
+	 <img src="imggallery/wed4.jpg" alt="Travel 3">
+	 <img src="imggallery/wed7.jpg" alt="Travel 3">
+
+	<img src="imggallery/wedd3.jpg" alt="Travel 3">
+	<img src="imggallery/wed3.jpg" alt="Travel 3">
+	
+	
+	<img src="imggallery/wedd1.jpg" alt="Travel 3">
+	<img src="imggallery/wed2.jpg" alt="Travel 3">
+	 
+	</div>
+
+</div>
+
+
+
+
+    <!-- JavaScript for Displaying Galleries -->
+    <script>
+        function showGallery(category) {
+            // Hide all galleries
+            const galleries = document.querySelectorAll('.gallery-container');
+            galleries.forEach(gallery => gallery.style.display = 'none');
+
+            // Show the selected gallery
+            const selectedGallery = document.getElementById(category);
+            if (selectedGallery) {
+                selectedGallery.style.display = 'block';
+                selectedGallery.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+
+<!-- Placeholder JS for Button Actions -->
+    <script>
+        function addImages() {
+            alert("Add Images button clicked! You can customize this action.");
+        }
+
+        function addVideos() {
+            alert("Add Videos button clicked! You can customize this action.");
+        }
+    
+	</script>
+
+	<audio id="background-audio" autoplay loop muted>
+    <source src="audio/lovergirl.m4a" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+<script>
+    // Unmute audio after user interaction (click)
+    document.body.addEventListener('click', function() {
+        const audio = document.getElementById('background-audio');
+        audio.muted = false;
+        audio.play();
+    });
+</script>
+
+	 <footer>
+        <p>&copy; Que's Website 2024. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
